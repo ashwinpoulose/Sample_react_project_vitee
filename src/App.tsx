@@ -14,6 +14,10 @@ function App() {
         <br></br>
          <Content />
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <Footer></Footer>
     </div>
   );
