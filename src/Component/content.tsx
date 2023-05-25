@@ -4,10 +4,10 @@ function Content(){
     
     const lastName = "Poulose";
     
-    if(firstName) return <p>Welcome {firstName + " " + lastName} to React Training</p>;
+    if(firstName) return <h1>Welcome {firstName + " " + lastName} to React Training</h1>;
     
-    return <p>Welcome to React Training</p>;
     
+
     
     
     

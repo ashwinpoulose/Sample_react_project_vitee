@@ -1,6 +1,8 @@
 function header()
 {
-    return <h1>Welcome To REACT APP TEST</h1>
+    return <div className="alert alert-danger" role="alert">
+    <h1>REACT TRAINNING</h1>
+  </div>
 }
 
 export default header;
