@@ -5,8 +5,11 @@ import Footer from "./Component/footer";
 import ListGroup from "./Component/ListGroup";
 import "./App.css";
 import FavColor from "./Component/FavColor";
+import Message from "./Component/Message";
 
 function App() {
+  let heading = "React";
+  let items = ["React", "Angular", "Python", "JAVA", "C"];
   return (
     <div>
       <Menu />
@@ -20,11 +23,13 @@ function App() {
       </div>
       <br></br>
 
-      <ListGroup />
+      <ListGroup heading={heading} items={items} />
       <hr />
       <br></br>
 
       <FavColor />
+
+      <Message text={"Hello First Property Example"}></Message>
       <Footer></Footer>
     </div>
   );

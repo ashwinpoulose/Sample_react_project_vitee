@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 
-function ListGroup() {
-  let items = ["React", "Angular", "Python", "JAVA", "C"];
+interface Props {
+  heading: string;
+  items: string[];
+}
+
+function ListGroup(props: Props) {
   const [active, setActive] = useState(-1);
   //items = [];
   const handleClick = (event: MouseEvent) => console.log(event);
   return (
     <>
-      <h1>Select Course</h1>
-      {items.length === 0 && <p>No items is found in the list</p>}
+      <h1>{props.heading}</h1>
+      {props.items.length === 0 && <p>No items is found in the list</p>}
       <ul className="list-group">
-        {items.map((x, index) => (
+        {props.items.map((x, index) => (
           <li
             key={x}
             className={`list-group-item ${index === active ? "active" : ""}`}
@@ -24,4 +28,7 @@ function ListGroup() {
   );
 }
 
+// function ListGroup(props: Props) {
+//   return <h1>{props.heading}</h1>;
+// }
 export default ListGroup;
