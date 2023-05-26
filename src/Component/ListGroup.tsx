@@ -1,14 +1,21 @@
-import { MouseEvent } from "react";
+import React, { useState } from "react";
+
 function ListGroup() {
-  const items = ["React", "Angular", "Django", "Swift", "App Development"];
+  let items = ["React", "Angular", "Python", "JAVA", "C"];
+  const [active, setActive] = useState(-1);
+  //items = [];
   const handleClick = (event: MouseEvent) => console.log(event);
   return (
     <>
-      <h1>Dynamic List of Courses Offered</h1>
-      {items.length === 0 && <p>No Items is found in the list</p>}
+      <h1>Select Course</h1>
+      {items.length === 0 && <p>No items is found in the list</p>}
       <ul className="list-group">
         {items.map((x, index) => (
-          <li className="list-group-item" key={index} onClick={handleClick}>
+          <li
+            key={x}
+            className={`list-group-item ${index === active ? "active" : ""}`}
+            onClick={() => setActive(index)}
+          >
             {x}
           </li>
         ))}
@@ -16,4 +23,5 @@ function ListGroup() {
     </>
   );
 }
+
 export default ListGroup;
