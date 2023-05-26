@@ -1,9 +1,9 @@
-
 import Header from "./Component/header";
 import Menu from "./Component/menu";
 import Content from "./Component/content";
 import Footer from "./Component/footer";
 import ListGroup from "./Component/ListGroup";
+import "./App.css";
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
       <Menu />
       <br></br>
       <Header />
-      <div>
+      <div id="cen">
         <br></br>
-         <Content />
+        <Content />
       </div>
       <br></br>
 
