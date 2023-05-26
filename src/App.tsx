@@ -11,7 +11,7 @@ function App() {
       <Menu />
       <br></br>
       <Header />
-      <div id="cen">
+      <div className="com-sm-4">
         <br></br>
         <Content />
       </div>
